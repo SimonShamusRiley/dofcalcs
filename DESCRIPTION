@@ -1,0 +1,19 @@
+Package: dofcalcs
+Title: Utilities for Degree of Freedom Calculations with glmmTMB
+Version: 0.0.0.1
+Authors@R: 
+    person("Simon", "Riley", , "ssr@agro.au.dk", role = c("aut", "cre"))
+Description: 
+    This package contains functions for calculating degrees of freedom for models fit with glmmTMB.
+Depends: 
+  R (>= 4.1.0)
+imports: 
+  dplyr
+  car
+  glmmTMB
+  lme4
+suggests:
+License: AGPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
