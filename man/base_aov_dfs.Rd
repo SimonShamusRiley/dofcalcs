@@ -2,8 +2,7 @@
 % Please edit documentation in R/base_aov_dfs.R
 \name{base_aov_dfs}
 \alias{base_aov_dfs}
-\title{Performs basic ANOVA degrees of freedom calculations for input into downstream
-functions.}
+\title{Base DF Calculations}
 \usage{
 base_aov_dfs(model)
 }
@@ -17,4 +16,3 @@ a \code{\link{data.frame}}
 Performs basic ANOVA degrees of freedom calculations for input into downstream
 functions.
 }
-\keyword{internal}

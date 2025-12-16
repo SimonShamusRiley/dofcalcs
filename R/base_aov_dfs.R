@@ -1,10 +1,13 @@
+#' @title Base DF Calculations
+#' 
+#' @description 
 #' Performs basic ANOVA degrees of freedom calculations for input into downstream
 #' functions.
 #'
 #' @param model a \code{\link{glmmTMB}} model object
 #'
 #' @return a \code{\link{data.frame}}
-#' @keywords internal
+#' @export
 base_aov_dfs<-function(model){
   
   # Model Matrix
@@ -93,15 +96,8 @@ base_aov_dfs<-function(model){
 #====================================== Formula and Data basic dfs ===================================================
 
 
-#' Performs basic ANOVA degrees of freedom calculations for input into downstream
-#' functions with a formula and data supplied separately. This useful for random
-#' slope / slope & int models
-#'
-#' @param formula \code{\link{formula}}
-#' @param data a \code{\link{data.frame}}
-#'
-#' @return a \code{\link{data.frame}}
-#' @keywords internal
+#' @rdname residual_aov
+#' @export
 data_aov_dfs <- function(formula, data){
   
   N <- nrow(data)
@@ -303,6 +299,7 @@ individual_rint_rslope <- function(lhs, rhs, data) {
 }
 
 # residual calc
+#' @export
 resid_calc <- function(model){
   
   resid_form <- aov_formula_writer(model)

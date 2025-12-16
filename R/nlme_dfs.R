@@ -1,11 +1,5 @@
-#' nlme ANOVA and Degrees of Freedom Calculations
-#'
-#' @param model a \code{\link{glmmTMB}} model object
-#' @param type type of test, \code{II, III, 2, 3}. Roman numerals are equivalent
-#'     to the corresponding Arabic numerals.
-#'
-#' @return a \code{data.frame}
-#' @keywords internal
+#' @rdname residual_aov
+#' @export
 nlme_aov <- function(model = model, type = type){
   
   dc <- dataClasses(model)
@@ -96,6 +90,7 @@ nlme_aov <- function(model = model, type = type){
 #' @param model a \code{\link{glmmTMB}} model object
 #'
 #' @return a \code{data.frame}
+#' @export
 nlme_summary <- function(model = model) {
   
   # Set up basic summary table information
