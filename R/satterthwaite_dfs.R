@@ -1,5 +1,4 @@
 #' @rdname residual_aov
-#' @export
 satterthwaite_aov = function(model = model, type = type){
   y_name<- names(model$modelInfo$respCol)
   dc <- dataClasses(model)
