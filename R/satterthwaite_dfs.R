@@ -18,7 +18,7 @@ satterthwaite_aov = function(model = model, type = type){
   df_output$vartype <- NULL
   df_output$denDf <- NA
   
-  X = model.matrix(mod, 'X')
+  X = model.matrix(model, 'X')
   batch = factor(attr(X, 'assign'))
   M = t(model.matrix(~ batch))
   M = M[rownames(M) != '(Intercept)', ]
@@ -27,7 +27,7 @@ satterthwaite_aov = function(model = model, type = type){
   chisq <- as.vector(TMBaov$Chisq)
   nDF <- as.vector(TMBaov$Df)
   Fval <- chisq/nDF
-  dDF <- glmmTMB::dof_satt(mod, M)
+  dDF <- glmmTMB::dof_satt(model, M)
   Pval <- pf(Fval, nDF, dDF, lower.tail = FALSE)
   
   aod <- data.frame(numDF = nDF, denDF = dDF, Fvalue = round(Fval, 2), pvalue = round(Pval, 4))
