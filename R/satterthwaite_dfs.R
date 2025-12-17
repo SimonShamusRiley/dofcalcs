@@ -18,7 +18,7 @@ satterthwaite_aov = function(model = model, type = type){
   df_output$vartype <- NULL
   df_output$denDf <- NA
   
-  X = model.matrix(mod, 'X')
+  X = model.matrix(model, 'X')
   batch = factor(attr(X, 'assign'))
   M = t(model.matrix(~ batch))
   M = M[rownames(M) != '(Intercept)', ]
